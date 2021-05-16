@@ -18,7 +18,7 @@ const data = {
             image: '/images/products/p2.jpeg',
             price:130,
             brand: "Addidas", 
-            rating: 4,
+            rating: 5,
             numReviews: 7,
             description: 'high quality product',
         },
