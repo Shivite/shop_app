@@ -3,7 +3,8 @@ import React from 'react'
 export default function ProductScreen() {
     return (
         <div>
-            ProductScreen
+            ProductScreen 
+            Crating new product screen
         </div>
     )
 }
