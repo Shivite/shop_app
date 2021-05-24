@@ -37,7 +37,7 @@ const data = {
             description: 'Raymond best quality product',
         },
         {
-            _id:'4',
+            _id:'3',
             name: "Addidas fit pants",
             categoty: "pants",
             image: '/images/products/p4.jpeg',
