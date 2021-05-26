@@ -38,7 +38,7 @@ export default function ProductScreen() {
                             <div className="row">
                                 <div>Status</div>
                                 <div>
-                                    {product.countInStock > 0 ? (<span className="success">Product in stock</span>) : (<span className="error">Out of stock</span>)}
+                                    {product.countInStock > 0 ? (<span className="success">Product in stock</span>) : (<span className="danger">Out of stock</span>)}
                                 </div>
                             </div>
                         </li>
