@@ -13,7 +13,7 @@ export default function HomeScreen() {
     const fetchData = async () => {
       try{
         setLoading(true)
-        const {data} = await axios.get('/api/products1');
+        const {data} = await axios.get('/api/products');
         setLoading(false)
         setProducts(data);
       }

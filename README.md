@@ -68,3 +68,26 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## eslint setup for project error linking
+
+- install eslint to visual code editor
+- npm install -D eslint
+- run ./node_modules/.bin/eslint --init
+- create frontend/.env
+- Add SKIP_PREFLIGHT_CHECK= true
+
+## redux
+- npm install redux react-redux
+- create store.js
+- initState= {products:[]}
+- reducer = (state, action) => switch LOAD_PRODUCTS : { products: action.payload}
+- export default createStore(reducer, initState)
+- Edit home.js
+- shopname = useSelector(state => state.products)
+- const dispatch = useDespatch()
+- useEffect(() => dispatch({type: LOAD_PRODUCTS, payload:data}))
+- add store to index.js
+
+- component -> create action & dispatch action to redux store to change strate.
