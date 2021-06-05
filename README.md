@@ -81,13 +81,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## redux
 - npm install redux react-redux
 - create store.js
-- initState= {products:[]}
-- reducer = (state, action) => switch LOAD_PRODUCTS : { products: action.payload}
-- export default createStore(reducer, initState)
-- Edit home.js
-- shopname = useSelector(state => state.products)
-- const dispatch = useDespatch()
-- useEffect(() => dispatch({type: LOAD_PRODUCTS, payload:data}))
-- add store to index.js
-
-- component -> create action & dispatch action to redux store to change strate.
+--- Having two things initialState and reducer. reducer function will return modified states. both used in createStore(reducer, initialState)
+- CONSTANTS
+---create src/constants/eachConstant.js
+- ACTIONS
+---CREATE src/action/eachAction.js
+---Actions are arrow functions returns other async function which accept dispatch as paramerter. Dispatch will field by redux-thunk. Dispatch accept object [ object have type ] type is same as constant for which action is created.
+--- Dispatch ({type: ACTION_TYPE, payload: objectHaveReducerStates }) 
+--- component -> create action & dispatch action to redux store to change strate.
+- Reducer
+---Function accept paramertes (state, action). Use switch case for actionType. Each case return state. For updated states 
+we use action.payload - All reducer states available in action payload.
+- Add reducer to store
+---It use combine reducer parameter object where we pass the reducer
+- UseSelector
+--- used to get object from redux store.
+--- function accepts function as paramerter state.
+- Get data in component 
+--- use dispatch(callFunction())
+-useDispatch
+--- function to use react actions in component.
+-steps
+1)install redux, react-redux, redux-thunk
+2) add provider
+3)create store with redux and apply thunk middleware
+4)Define constants and actions
+5)create reducer
+6)fetch data from backend useDispatch
